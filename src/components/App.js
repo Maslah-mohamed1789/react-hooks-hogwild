@@ -3,6 +3,7 @@ import hogs from '../porkers_data';
 import Nav from './Nav';
 import Filters from './Filters';
 import HogContainer from './HogContainer';
+import HogForm from './HogForm';
 import 'semantic-ui-css/semantic.min.css';
 
 
@@ -43,7 +44,8 @@ function App() {
       <Nav />
       <Filters onToggleGreased={toggleGreased} onChangeSort={changeSort} />
       <HogContainer hogs={displayedHogs} onHideHog={hideHog} />
-      {/* AddHogForm component can be placed here with `addHog` function */}
+      <HogForm addHog={addHog} />
+      
     </div>
   );
 }
